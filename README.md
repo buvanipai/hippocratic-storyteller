@@ -1,7 +1,62 @@
 # Hippocratic AI Coding Assignment
 Welcome to the [Hippocratic AI](https://www.hippocraticai.com) coding assignment
 
-## Instructions
+## Setup Instructions
+
+### Prerequisites
+- Python 3.8 or higher
+- OpenAI API key
+
+### Installation
+
+1. **Clone or download this repository**
+
+2. **Set up a virtual environment** (recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure your API key**:
+   - Copy `.env.example` to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Edit `.env` and add your OpenAI API key:
+     ```
+     OPENAI_API_KEY=your_actual_api_key_here
+     ```
+
+### Running the Application
+
+Run the bedtime story generator:
+```bash
+python main.py
+```
+
+The application will:
+1. Ask you for a story request (or use a default example)
+2. Generate a story using GPT-3.5-turbo
+3. Evaluate the story using a judge system
+4. Refine the story up to 3 times if needed
+5. Allow you to request up to 3 user-driven revisions
+
+### System Architecture
+
+See `system_diagram.mermaid` for a visual representation of the storytelling system flow, including:
+- Story generation with structured prompts
+- Judge evaluation with 10 quality criteria
+- Iterative refinement loop
+- User feedback integration
+
+---
+
+## Original Instructions
 The attached code is a simple python script skeleton. Your goal is to take any simple bedtime story request and use prompting to tell a story appropriate for ages 5 to 10.
 - Incorporate a LLM judge to improve the quality of the story
 - Provide a block diagram of the system you create that illustrates the flow of the prompts and the interaction between judge, storyteller, user, and any other components you add
