@@ -6,6 +6,12 @@ import json
 """
 Before submitting the assignment, describe here in a few sentences what you would have built next if you spent 2 more hours on this project:
 
+If I had 2-3 more hours, I would start by 'expanding the judge system'. I'd add a multi-agent panel with a child psychologist for emotional appropriateness and a kid voice agent to review from a 7-year old's perspective. Each judge would score independently and then a lead editor would combine their feedback to reduce bias and ensure balanced evaluations.
+
+Following this, I'd work on a 'remix classic tales engine' which would reimagine fairy tales based on user prompts, teaching kids to think out of the box. Examples could be 'What if Cinderella was a detective?' or 'The three pigs made their houses on the Moon.'
+
+Finally, I'd implement an 'interactive storytelling' mode where kids can make choices at key points in the story to shape the plot and lead to unique endings. The judge panel would keep stories coherent and engaging across different paths.
+
 """
 
 load_dotenv()
