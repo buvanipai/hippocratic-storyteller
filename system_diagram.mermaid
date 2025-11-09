@@ -1,0 +1,32 @@
+graph TD
+    A[User Input: Story Request] --> B[Storytelling System]
+    
+    B --> C[Story Generator]
+    C --> D[Generate Initial Story<br/>Age: 5-10<br/>Story Arc Structure<br/>Positive Message]
+    
+    D --> E[Story Judge/Evaluator]
+    E --> F{Evaluate Quality<br/>6 Criteria:<br/>1. Age Appropriate<br/>2. Engagement<br/>3. Story Structure<br/>4. Language Quality<br/>5. Bedtime Suitable<br/>6. Educational Value}
+    
+    F -->|Score < 7| G[Generate Feedback]
+    G --> H{Max Iterations<br/>Reached?}
+    H -->|No| C
+    H -->|Yes| I[Final Story]
+    
+    F -->|Score >= 7| I
+    
+    I --> J[Display to User]
+    J --> K{User Wants<br/>Changes?}
+    
+    K -->|Yes| L[User Feedback]
+    L --> M[Story Regenerator<br/>with User Feedback]
+    M --> E
+    
+    K -->|No| O[End: Sweet Dreams!]
+    
+    style A fill:#e1f5ff
+    style I fill:#d4edda
+    style O fill:#d4edda
+    style E fill:#fff3cd
+    style F fill:#fff3cd
+    style C fill:#f8d7da
+    style M fill:#f8d7da
